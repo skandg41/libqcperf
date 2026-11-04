@@ -38,7 +38,20 @@ if(QCPERF_ENABLED_QCOM_LINUX_CPU)
     add_subdirectory(qcom-linux-cpu)
 endif()
 
+if(QCPERF_ENABLED_QCOM_LINUX_GPU)
+    add_subdirectory(qcom-linux-gpu)
+endif()
+
 if(QCPERF_ENABLED_QCOM_LINUX_NPU)
+    add_subdirectory(qcom-dsp)
+    add_subdirectory(qcom-dsp-npu)
+endif()
+
+if(QCPERF_ENABLED_QCOM_LINUX_THERMAL)
+    add_subdirectory(linux-thermal)
+endif()
+
+if(QCPERF_ENABLED_WOS_NPU)
     add_subdirectory(qcom-dsp)
     add_subdirectory(qcom-dsp-npu)
 endif()
